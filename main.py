@@ -4,11 +4,9 @@
 
 #This is a d100 Roleplaying System
 
-if __name__ == "__main__":
-    main_loop()
+# Start the game parameters
 
-// Start the game parameters
-def Character(object):
+class Character(object):
     def __init__(self):
         self.name = ""
 
@@ -30,9 +28,9 @@ def Character(object):
         self.wallet = None # Expect a financials related object
 
         ## Character Info
+        self.description = None # Description type object. Tells of what they currently look like.
         self.morals = None # Character morals object. It's kinda like humanity in vampire
-        self.personality = None # Character personality object with traits # E.G. ["Funny, Trusting, Suspicious"]
-        self.genetics = None # Character traits passed down from parents
+        self.personality = [] # List of personality traits # E.G. ["Funny, Trusting, Suspicious"]
 
         ## Special
         self.inventory = None # Expect an inventory object
@@ -47,3 +45,6 @@ def Character(object):
 def main_loop():
     print("Hello world!")
     c = Character()
+
+if __name__ == "__main__":
+    main_loop()
